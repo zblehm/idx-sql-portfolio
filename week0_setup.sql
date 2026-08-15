@@ -1,0 +1,3 @@
+SELECT *
+FROM rets_property 
+LIMIT 5;
