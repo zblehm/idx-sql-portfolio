@@ -7,9 +7,100 @@
 -- ============================================================ 
 
 
--- Week 1 Open-Ended Challenge
+-- Summary
 -- ============================================================
-/* Question: "Before we start any analysis on this database I want to know: 
+/* Week 1 Deliverables
+ * #1 Columns w/ unexpected data types
+ * In rets_property
+ * LM_Dec_3 (Number of bathrooms) is a DECIMAL(4,1) should be INT
+ * 
+ * In rets_openhouse
+ * OH_StartTime & OH_EndTime are TIME type (reference sheet has VARCHAR)
+ * TIME type matches the data, suggest updating reference sheet
+ * 
+ * In california_sold (many incorrect datatypes)
+ * ListingKey is BIGINT (reference sheet has VARCHAR) <-- problem for join w/ L_DisplayId (VARCHAR)
+ * CloseDate is VARCHAR(255) (reference sheet has DATE)
+ * ListPrice & ClosePrice are DOUBLE (reference sheet has DECIMAL)
+ * LivingArea & BedroomsTotal are DOUBLE (reference sheet has INT)
+ * YearBuild is DOUBLE (should be INT)
+ * Stories is DOUBLE (should be INT)
+ * ParkingTotal is DOUBLE (should be INT)
+ * MainLevelBedrooms is DOUBLE (should be INT)
+ * GarageSpaces is DOUBLE (should be INT)
+ * Levels is VARCHAR(255) (should be INT?)
+ * PurchaseContractDate & ListingContractDate are VARCHAR(255) (should be DATE?)
+ * BathroomsTotal & BathroomsTotalInteger are DOUBLE (should be INT)
+ * 
+ * 
+ * #2 NULL check rate for rets_property for select columns
+ * price nulls = 0
+ * bed nulls = 91
+ * sqft nulls = 85
+ * city nulls = 89
+ * zip null = 7
+ * city and zip both null = 6
+ * address null = 143 <-- how can we have a listing w/o an address?
+ * 
+ * 
+ * #3 Distribution of rets_property.L_Status
+ * All rows have L_Status of Active (no NULLS)
+ * 
+ * 
+ * #4 Sanity Check - Columns w/ impossible values
+ * In rets_property we have min/max values that don't seem realistic
+ * L_SystemPrice: min price 795, max 400,000,000
+ * L_keyword2: min beds 0, max beds 52
+ * LM_Int2_3: min sqft 0, max sqft 236,022
+ * 
+ * In rets_openhouse we have max year in the future and min time format issue
+ * OpenHouseDate MAX is incorrect (year 4202) 
+ * OH_StartDate MAX is incorrect (year 4202) 
+ * OH_EndDate MAX is incorrect (year 4202)
+ * OH_EndTime MIN is 07:00:00 (should be in 24-hr format e.g. 19:00:00?)
+ * 
+ * In california_sold has a question min ClosePrice and max year in the future
+ * ClosePrice: min is 0 (sold for $0)
+ * CloseDate: max is year 2072
+ * 
+ * 
+ * #5 Duplicate check on L_DisplayId
+ * There are 4 duplicated L_DisplayId values. 
+ * 1178234327
+ * 1178478543
+ * 1178585070
+ * 1178691980.
+ * Each of the above L_DisplayId value is repeated twice.
+ * Examining the rows shows all non-NULL attributes (except id) are identical.
+ * The duplicated rows should be dropped (id: 319906, 319904, 319899, 319894)
+ * 
+ * 
+ * #6 Cardinality check between rets_propery and rets_openhouse
+ * For rets_openhouse.L_DisplayId distinct and total rows are equal.
+ * This means there are no repeated or missing (null) values in the column.
+ * 
+ * There are:
+ * 41,012 listings w/o an openhouse
+ * 1,664 openhouse w/o a listing
+ * 13,426 matching listing/openhouse counting dupicates from listing
+ * 13,424 matching openhouse/listing (unique openhouse)
+ * 
+ * 41,012 + 13,426 = 54,438 total listings - CORRECT
+ * 1,664 + 13,424 = 15,088 total openhouse - CORRECT
+ * 
+ * There are duplicated rows in rets_property, but after dropping these
+ * duplicates, this relationship will be 1 (optional) to 1 (optional).
+ * 
+ * 
+ * #7 City name mismatch check between rets_property and rets_openhouse
+ * There are 82 cities in california_sold that do not appear in rets_property.
+ * We conclude there are cities where houses are being sold, but not listed.
+ * 
+ * Below are the SQL queries which give these results
+ * 
+ * 
+ * Week 1 Open-Ended Challenge
+ * Question: "Before we start any analysis on this database I want to know: 
  * How trustworthy is the data?
  * What should analysts be aware of before drawing conclusions?"
  * 
@@ -37,96 +128,6 @@
  * accounted for before joining this data. 
  * 
  * Additional results are explained below in more detail.
- * 
- * 
- * Week 1 Deliverables
- * Columns w/ unexpected data types
- * In rets_property
- * LM_Dec_3 (Number of bathrooms) is a DECIMAL(4,1) should be INT
- * 
- * In rets_openhouse
- * OH_StartTime & OH_EndTime are TIME type (reference sheet has VARCHAR)
- * TIME type matches the data, suggest updating reference sheet
- * 
- * In california_sold (many incorrect datatypes)
- * ListingKey is BIGINT (reference sheet has VARCHAR) <-- problem for join w/ L_DisplayId (VARCHAR)
- * CloseDate is VARCHAR(255) (reference sheet has DATE)
- * ListPrice & ClosePrice are DOUBLE (reference sheet has DECIMAL)
- * LivingArea & BedroomsTotal are DOUBLE (reference sheet has INT)
- * YearBuild is DOUBLE (should be INT)
- * Stories is DOUBLE (should be INT)
- * ParkingTotal is DOUBLE (should be INT)
- * MainLevelBedrooms is DOUBLE (should be INT)
- * GarageSpaces is DOUBLE (should be INT)
- * Levels is VARCHAR(255) (should be INT?)
- * PurchaseContractDate & ListingContractDate are VARCHAR(255) (should be DATE?)
- * BathroomsTotal & BathroomsTotalInteger are DOUBLE (should be INT)
- * 
- * 
- * NULL check rate for rets_property for select columns
- * price nulls = 0
- * bed nulls = 91
- * sqft nulls = 85
- * city nulls = 89
- * zip null = 7
- * city and zip both null = 6
- * address null = 143 <-- how can we have a listing w/o an address?
- * 
- * 
- * Distribution of rets_property.L_Status
- * All rows have L_Status of Active (no NULLS)
- * 
- * 
- * Sanity Check - Columns w/ impossible values
- * In rets_property we have min/max values that don't seem realistic
- * L_SystemPrice: min price 795, max 400,000,000
- * L_keyword2: min beds 0, max beds 52
- * LM_Int2_3: min sqft 0, max sqft 236,022
- * 
- * In rets_openhouse we have max year in the future and min time format issue
- * OpenHouseDate MAX is incorrect (year 4202) 
- * OH_StartDate MAX is incorrect (year 4202) 
- * OH_EndDate MAX is incorrect (year 4202)
- * OH_EndTime MIN is 07:00:00 (should be in 24-hr format e.g. 19:00:00?)
- * 
- * In california_sold has a question min ClosePrice and max year in the future
- * ClosePrice: min is 0 (sold for $0)
- * CloseDate: max is year 2072
- * 
- * 
- * Duplicate check on L_DisplayId
- * There are 4 duplicated L_DisplayId values. 
- * 1178234327
- * 1178478543
- * 1178585070
- * 1178691980.
- * Each of the above L_DisplayId value is repeated twice.
- * Examining the rows shows all non-NULL attributes (except id) are identical.
- * The duplicated rows should be dropped (id: 319906, 319904, 319899, 319894)
- * 
- * 
- * Cardinality check between rets_propery and rets_openhouse
- * For rets_openhouse.L_DisplayId distinct and total rows are equal.
- * This means there are no repeated or missing (null) values in the column.
- * 
- * There are:
- * 41,012 listings w/o an openhouse
- * 1,664 openhouse w/o a listing
- * 13,426 matching listing/openhouse counting dupicates from listing
- * 13,424 matching openhouse/listing (unique openhouse)
- * 
- * 41,012 + 13,426 = 54,438 total listings - CORRECT
- * 1,664 + 13,424 = 15,088 total openhouse - CORRECT
- * 
- * There are duplicated rows in rets_property, but after dropping these
- * duplicates, this relationship will be 1 (optional) to 1 (optional).
- * 
- * 
- * City name mismatch check between rets_property and rets_openhouse
- * There are 82 cities in california_sold that do not appear in rets_property.
- * We conclude there are cities where houses are being sold, but not listed.
- * 
- * Below are the SQL queries which give these results
  */
 -- ============================================================
 
@@ -418,8 +419,6 @@ FROM california_sold;
  * CloseDate - 0
  */
 
-
-
 -- Sanity check: are numeric columns within realistic ranges?
 SELECT
 	MIN(ListPrice) AS min_list_price,
@@ -487,12 +486,13 @@ FROM rets_property;
 -- Results: values match, confirms there are no listing with NULL price
 
 
--- Other Analisys
+-- Other Analysis
 
 SELECT 
 	rp.L_DisplayId, 
 	rp.L_ListingID 
 FROM rets_property rp
 LIMIT 10;
+-- Identical resulsts, it seems like these two columns are identical
 
 
