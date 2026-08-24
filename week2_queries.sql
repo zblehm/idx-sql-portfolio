@@ -1,7 +1,7 @@
 -- ============================================================ 
 -- IDX Exchange — SQL Training
 -- Week 2: Queries 
--- Tables: rets_property, rets_openhouse, california_sold (all 3)
+-- Tables: rets_property
 -- Author: Zachary Blehm 
 -- ============================================================ 
 
