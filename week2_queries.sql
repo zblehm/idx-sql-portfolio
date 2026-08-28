@@ -260,7 +260,7 @@ FROM rets_property
 WHERE L_City = Irvine 
   AND L_SystemPrice IS NOT NULL 
 ORDER BY L_SystemPrice ASC 
-LIMIT '10'; -- Bug 2 there should not be single quotes here (number not text)
+LIMIT '10';
 
 -- Corrected version: 10 cheapest listings in Irvine with valid price
 SELECT 
