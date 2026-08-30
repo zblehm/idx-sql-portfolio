@@ -1,0 +1,27 @@
+"L_City","bedrooms","total_open_houses","pct_with_open_house","bedrooms_rank"
+Los Angeles,1,62,15.9,1
+San Diego,1,46,13.3,2
+San Jose,1,22,31.0,3
+Long Beach,1,19,14.2,4
+Oakland,1,19,36.5,4
+Los Angeles,2,226,22.1,1
+San Diego,2,158,18.6,2
+San Jose,2,64,24.8,3
+Irvine,2,53,34.0,4
+Santa Monica,2,46,41.8,5
+Los Angeles,3,342,33.9,1
+San Diego,3,208,35.1,2
+San Jose,3,140,44.0,3
+Irvine,3,111,48.1,4
+Long Beach,3,66,41.5,5
+Los Angeles,4,208,33.0,1
+San Jose,4,151,60.4,2
+Irvine,4,127,47.0,3
+San Diego,4,100,34.2,4
+Temecula,4,47,28.0,5
+Los Angeles,5,103,31.8,1
+Irvine,5,43,45.3,2
+San Diego,5,34,32.7,3
+San Jose,5,30,44.8,4
+Menifee,5,27,40.3,5
+Sherman Oaks,5,27,52.9,5

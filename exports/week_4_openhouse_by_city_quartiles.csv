@@ -1,0 +1,21 @@
+"L_City","quartile","total_open_houses","pct_with_open_house","quartile_rank"
+San Diego,1,65,13.2,1
+Los Angeles,1,55,14.2,2
+Victorville,1,43,11.5,3
+Oakland,1,35,21.9,4
+Palm Desert,1,33,12.2,5
+Los Angeles,2,174,21.1,1
+San Diego,2,141,21.3,2
+Riverside,2,78,28.9,3
+Ontario,2,62,29.7,4
+Menifee,2,61,26.8,5
+Los Angeles,3,300,29.1,1
+San Diego,3,215,32.6,2
+San Jose,3,125,39.4,3
+Irvine,3,103,42.0,4
+Long Beach,3,71,43.3,5
+Los Angeles,4,464,30.9,1
+Irvine,4,232,47.3,2
+San Jose,4,225,55.4,3
+San Diego,4,138,29.6,4
+Huntington Beach,4,67,41.1,5
