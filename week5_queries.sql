@@ -64,7 +64,7 @@
  * home in Sacramento. What does the data say?"
  * 
  * Historically homes in Sacramento sell for the list value on average.
- * The current average list value for home in Sacramento is slightly below the historic
+ * The current average list value for homes in Sacramento is slightly below the historic
  * average list value. Based on these two factors we conclude that it is NOT a good time
  * to sell a home in Sacremento. But it is also not a terrible time as the market
  * is only slightly below historic prices.
@@ -94,6 +94,7 @@ FROM duplicates;
 CREATE VIEW california_sold_dedup AS
 SELECT DISTINCT *
 FROM california_sold
+-- Additionally some date are incorrect, remove the errant close dates
 WHERE CloseDate LIKE '2026%';
 
 -- Verify the deduplication
@@ -143,6 +144,7 @@ ORDER BY ListPrice ASC;
 -- This is skewing the results in the query above
 
 -- Exercise 5.2 Seasonal Trends
+-- How many homes were sold in each month contained in the data?
 SELECT 
 	YEAR(CloseDate)           AS sale_year,
 	MONTH(CloseDate)          AS sale_month,
@@ -152,7 +154,7 @@ FROM california_sold_dedup
 WHERE CloseDate IS NOT NULL 
 GROUP BY YEAR(CloseDate), MONTH(CloseDate) 
 ORDER BY sale_year, sale_month;
--- Seems like partial data for March and August (verify below)
+-- Low counts for March and August (partial data? verify below)
 
 -- What are the start end dates for sales data?
 SELECT 
