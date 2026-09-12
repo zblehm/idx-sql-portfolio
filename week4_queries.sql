@@ -202,13 +202,15 @@ LIMIT 10;
 -- Q2 Most popular day of the week for open houses
 SELECT 
 	DAYNAME(OpenHouseDate) AS day_of_week,
-	COUNT(*) AS num_open_houses 
+	COUNT(*) AS num_open_houses,
+	ROUND(COUNT(*) / SUM(COUNT(*)) OVER () * 100, 2) AS percent_of_openhouses
 FROM rets_openhouse 
 WHERE OpenHouseDate IS NOT NULL 
 GROUP BY DAYNAME(OpenHouseDate), DAYOFWEEK(OpenHouseDate) 
 ORDER BY num_open_houses DESC;
--- Results: Saturday is the most popular (7300 listings)
--- Results: Monday is the least popular (38 listings)
+-- Results: Saturday is the most popular (7300 listings / 48.38% of all open houses)
+-- Results: Monday is the least popular (38 listings / 0.25% of all open houses)
+
 
 -- Q3 Top 10 listings with the most open houses
 SELECT
