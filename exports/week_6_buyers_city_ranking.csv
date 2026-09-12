@@ -1,0 +1,265 @@
+"City","inventory_sales_ratio","price_ratio","pct_sold_below_list","buyer_rank"
+Palm Desert,0.88,0.92,74.58,1
+Big Bear Lake,2.91,1.04,70.33,2
+Marina Del Rey,1.61,1.05,77.50,3
+Indio,1.10,1.0,65.90,3
+Laguna Woods,0.87,0.83,55.75,5
+Palm Springs,0.92,1.05,73.58,6
+Aptos,1.08,1.06,59.55,7
+Big Bear City,2.51,1.08,58.02,8
+Idyllwild,1.48,1.11,73.13,9
+North Hollywood,0.86,0.92,49.35,10
+Indian Wells,0.65,0.96,81.44,11
+Discovery Bay,1.65,1.1,55.00,12
+La Quinta,0.78,1.07,75.88,13
+Dublin,0.65,0.94,57.07,14
+El Monte,0.78,1.01,54.44,15
+Cathedral City,0.79,1.06,60.99,16
+Crestline,1.08,1.07,49.15,17
+Irvine,1.01,1.15,69.92,18
+Campbell,1.36,0.87,34.00,19
+Mariposa,1.17,1.22,66.67,20
+Yucca Valley,1.27,1.21,61.71,21
+Newhall,0.98,1.0,43.01,21
+Joshua Tree,1.66,1.26,63.64,23
+Canyon Country,0.93,1.02,45.81,23
+Panorama City,1.05,0.94,37.93,23
+Kelseyville,1.53,1.31,70.97,26
+Fairfield,0.75,0.91,44.78,26
+Lake Arrowhead,2.53,1.4,71.76,28
+Marina,0.98,1.08,50.00,29
+Malibu,3.93,1.55,79.27,30
+Coronado,1.13,1.26,67.00,31
+Sherman Oaks,0.97,1.13,57.26,31
+Rancho Mirage,0.90,1.21,83.95,33
+Encino,1.22,1.27,63.89,34
+West Hollywood,1.72,1.38,66.67,35
+"29 Palms",2.01,1.19,50.47,36
+Helendale,0.93,1.09,50.82,37
+San Ramon,0.64,0.89,47.20,37
+Monterey Park,0.79,1.08,55.26,39
+Pleasanton,0.58,0.94,53.40,40
+Inglewood,0.91,1.07,47.62,41
+Valencia,0.76,0.95,42.77,42
+Coto de Caza,1.02,1.35,71.43,43
+Clearlake,1.39,1.39,63.16,44
+Agoura Hills,1.04,1.28,59.55,44
+Alhambra,0.77,1.03,48.09,44
+Beverly Hills,1.92,1.62,65.97,47
+San Diego,0.65,0.96,46.95,48
+Rancho Mission Viejo,0.71,0.98,45.32,48
+Carmel,1.43,1.58,68.42,50
+Aliso Viejo,0.57,0.91,48.94,50
+Calabasas,1.09,1.48,71.00,52
+Venice,1.08,1.36,59.79,53
+Sonora,1.58,1.34,54.43,54
+San Jose,0.81,0.92,37.36,54
+Rancho Santa Fe,1.21,2.07,72.94,56
+Laguna Beach,1.32,1.95,68.94,57
+Walnut,1.07,1.26,54.12,58
+Lake Forest,0.65,1.01,48.18,58
+Van Nuys,0.67,1.02,48.00,60
+Los Gatos,0.98,1.17,49.23,61
+Pacific Palisades,1.48,2.32,64.52,62
+Santa Monica,0.96,1.25,55.97,62
+Watsonville,1.16,1.46,57.97,64
+Milpitas,0.89,0.97,35.16,64
+Newport Beach,0.97,1.55,71.76,66
+Hawthorne,0.56,0.92,47.37,67
+Canyon Lake,0.98,1.34,57.29,68
+Canoga Park,0.79,1.05,43.94,69
+Santa Clara,0.83,0.86,29.13,70
+Porter Ranch,0.88,1.25,56.20,71
+California City,1.00,1.08,41.38,71
+Cambria,1.04,1.46,58.00,73
+Azusa,0.83,1.06,42.22,74
+Stockton,0.94,1.07,40.51,74
+Rowland Heights,0.88,1.3,57.97,76
+San Gabriel,0.81,0.91,29.90,77
+Running Springs,1.74,1.22,43.86,78
+Hacienda Heights,0.71,1.07,47.58,79
+Imperial Beach,1.51,1.22,44.26,79
+Culver City,0.74,0.89,33.88,79
+Diamond Bar,0.91,1.32,55.56,82
+Redondo Beach,0.51,0.93,48.36,83
+San Pedro,0.66,1.03,46.41,83
+Magalia,1.04,1.14,43.28,83
+Ontario,0.82,1.06,41.30,86
+Desert Hot Springs,1.07,1.29,48.60,87
+Walnut Creek,0.50,0.78,44.91,87
+Port Hueneme,0.67,1.02,43.30,89
+Santa Ana,0.68,0.97,39.58,89
+Woodland Hills,0.82,1.21,52.58,91
+Chino Hills,0.75,1.18,55.45,92
+Oroville,0.99,1.11,41.36,92
+Sylmar,0.84,0.99,33.83,92
+Chatsworth,0.85,1.38,58.54,95
+Alpine,1.08,0.98,22.64,95
+Laguna Hills,0.55,0.75,40.40,97
+Rancho Santa Margarita,0.51,0.92,46.11,98
+Rosamond,0.93,0.94,23.19,99
+Banning,0.74,1.05,42.44,100
+Glendale,0.67,0.92,35.74,100
+Studio City,0.94,1.42,54.79,102
+Upland,0.67,1.0,40.00,103
+Covina,0.81,1.04,37.93,104
+Sacramento,0.85,0.97,28.57,104
+Tarzana,0.97,1.66,56.14,106
+Long Beach,0.69,1.04,42.13,107
+La Jolla,0.82,1.93,71.36,108
+Costa Mesa,0.47,0.99,51.29,109
+Tustin,0.61,1.03,46.63,110
+Fremont,0.54,0.79,39.52,111
+Pacoima,0.89,1.11,41.07,112
+Los Angeles,1.20,1.62,48.93,113
+Barstow,1.03,1.09,36.36,113
+Eastvale,0.51,1.03,50.82,115
+Tujunga,0.85,1.08,38.98,116
+Monterey,0.77,1.4,59.52,117
+Adelanto,0.93,1.02,27.17,118
+Winnetka,0.69,0.92,29.13,119
+Newbury Park,0.45,1.01,51.53,120
+Ladera Ranch,0.50,0.94,43.81,120
+San Marcos,0.50,1.01,47.99,122
+Morgan Hill,1.00,1.18,40.35,123
+Temple City,0.75,1.09,42.47,124
+Rancho Palos Verdes,0.80,1.71,58.82,125
+Chino,0.53,1.05,48.64,126
+Arcadia,1.02,1.46,46.86,127
+Corona,0.69,1.12,45.67,128
+Simi Valley,0.62,1.07,44.31,129
+Saugus,0.58,1.02,41.24,130
+El Cajon,0.55,0.96,38.70,130
+Beaumont,0.64,1.02,38.20,130
+Reseda,0.65,1.07,41.59,133
+Tracy,0.78,1.05,34.00,133
+Fresno,0.68,1.14,46.58,135
+Granada Hills,0.47,1.06,52.20,136
+Saratoga,0.85,1.07,31.15,137
+Thousand Oaks,0.68,1.32,54.61,138
+Arroyo Grande,0.72,1.34,52.13,138
+San Jacinto,0.68,0.96,27.72,140
+Mission Viejo,0.38,1.0,48.18,141
+Ojai,0.84,1.74,49.44,142
+Lakeside,0.63,1.02,36.67,142
+Gardena,0.59,0.96,33.87,144
+Newark,0.53,0.96,37.50,145
+Anaheim,0.64,1.01,34.20,145
+Westlake Village,0.63,1.41,64.25,147
+Valley Center,0.66,1.25,49.52,147
+Bakersfield,0.76,1.17,42.40,147
+Glendora,0.67,1.1,42.11,150
+Carlsbad,0.38,1.04,50.93,151
+Paso Robles,0.78,1.49,50.21,152
+Cypress,0.45,0.92,40.31,152
+Pomona,0.71,1.09,39.04,154
+Mountain View,0.62,0.89,25.00,154
+Corona Del Mar,0.61,1.46,67.62,156
+Merced,0.60,1.15,48.81,157
+West Covina,0.63,1.03,36.22,158
+Apple Valley,0.79,1.11,35.48,159
+Danville,0.52,1.16,55.02,160
+Encinitas,0.55,1.17,52.20,160
+Palmdale,0.83,1.08,29.59,162
+Martinez,0.45,0.91,38.16,163
+Oceanside,0.43,0.99,43.30,164
+Paradise,0.83,1.18,37.88,165
+North Hills,0.59,1.02,35.23,166
+Lancaster,0.76,1.07,29.87,167
+Camarillo,0.51,1.07,44.86,168
+Claremont,0.52,1.01,38.10,168
+Placentia,0.47,0.88,34.35,168
+Oxnard,0.66,1.22,45.55,171
+Hollister,0.79,1.1,33.57,171
+Hayward,0.65,0.99,25.19,171
+Brentwood,0.53,1.2,53.73,174
+West Hills,0.62,1.09,40.94,175
+San Mateo,0.48,0.81,30.41,176
+Torrance,0.41,0.9,37.41,177
+Victorville,0.83,1.08,26.06,178
+San Dimas,0.75,1.38,45.24,179
+Burbank,0.52,1.03,39.04,179
+La Habra,0.51,1.0,36.96,179
+Laguna Niguel,0.59,1.33,52.71,182
+Seal Beach,0.47,1.18,56.77,183
+Temecula,0.79,1.36,42.04,184
+San Francisco,0.54,0.87,22.44,185
+Hemet,0.74,1.12,34.39,186
+Concord,0.45,0.87,32.81,186
+Vista,0.55,1.11,43.53,188
+Fallbrook,0.69,1.27,43.14,188
+Gilroy,0.79,1.28,39.13,190
+Winchester,0.65,1.02,24.21,191
+Dana Point,0.62,1.73,55.09,192
+Atascadero,0.44,1.08,47.54,193
+Montebello,0.62,1.22,44.68,193
+Huntington Beach,0.54,1.24,49.22,195
+Santa Cruz,0.69,1.21,39.26,196
+Pasadena,0.66,1.11,35.47,196
+Garden Grove,0.47,0.99,35.29,196
+Chula Vista,0.48,0.97,33.66,199
+Escondido,0.56,1.17,43.93,200
+Ramona,0.79,1.25,34.59,201
+La Mesa,0.58,1.07,34.07,202
+Lake Elsinore,0.72,1.15,33.94,202
+Sunnyvale,0.48,0.89,24.21,204
+La Verne,0.63,1.46,47.56,205
+Pittsburg,0.72,1.14,30.65,206
+Spring Valley,0.48,0.96,28.65,206
+Richmond,0.49,0.89,21.68,206
+Oakley,0.58,1.1,37.76,209
+Compton,0.51,1.01,29.76,210
+Oakland,0.46,0.72,19.40,211
+Phelan,0.71,1.13,29.70,212
+Lafayette,0.40,0.96,33.82,213
+Redwood City,0.47,0.91,23.84,214
+La Puente,0.65,1.07,24.30,215
+Highland,0.46,1.02,34.64,216
+Colton,0.65,1.09,29.35,217
+Orange,0.46,1.08,41.36,218
+Fullerton,0.44,1.06,39.67,219
+Northridge,0.57,1.11,37.50,219
+Moorpark,0.56,1.47,49.19,221
+Vallejo,0.72,1.12,26.23,222
+Redlands,0.59,1.22,40.82,223
+Rancho Cucamonga,0.59,1.2,39.86,224
+Antioch,0.58,1.04,23.96,225
+Yucaipa,0.50,1.04,33.33,226
+Chico,0.54,1.14,39.42,227
+Fontana,0.58,1.07,27.84,228
+Ventura,0.52,1.36,47.71,229
+Monrovia,0.55,1.14,37.89,230
+Buena Park,0.44,1.13,44.22,231
+Berkeley,0.28,0.62,10.07,231
+San Juan Capistrano,0.53,1.56,49.22,233
+Palo Alto,0.52,1.04,27.78,233
+Downey,0.55,1.06,27.27,235
+Alameda,0.32,0.86,15.15,235
+Santa Paula,0.71,1.97,40.00,237
+Hesperia,0.63,1.13,29.52,238
+Murrieta,0.63,1.35,39.78,239
+San Luis Obispo,0.50,1.3,46.30,240
+Poway,0.48,1.29,47.16,241
+Castaic,0.68,1.24,32.18,242
+Menifee,0.52,1.14,37.57,243
+Santee,0.41,1.02,30.41,243
+Riverside,0.58,1.17,34.15,245
+Rialto,0.47,1.0,19.69,246
+San Clemente,0.41,1.43,53.52,247
+Carson,0.52,1.06,25.78,248
+Castro Valley,0.33,0.97,26.09,249
+Yorba Linda,0.50,1.34,44.32,250
+San Bernardino,0.50,1.06,27.07,251
+San Leandro,0.38,0.97,18.52,252
+Wildomar,0.58,1.15,29.50,253
+Norwalk,0.35,1.01,22.78,254
+Moreno Valley,0.46,1.07,27.99,255
+Perris,0.61,1.18,27.31,255
+Livermore,0.40,1.13,35.90,257
+Fountain Valley,0.41,1.09,32.33,258
+Lakewood,0.27,1.08,28.00,259
+Whittier,0.49,1.16,27.47,260
+Jurupa Valley,0.52,1.3,28.50,261
+Manhattan Beach,0.43,1.72,40.91,262
+Salinas,0.51,1.47,33.95,263
+Santa Maria,0.39,1.19,31.39,263
